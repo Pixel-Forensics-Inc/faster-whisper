@@ -240,7 +240,7 @@ class SileroVADModel:
 
         opts = onnxruntime.SessionOptions()
         opts.inter_op_num_threads = 1
-        opts.intra_op_num_threads = 1
+        opts.intra_op_num_threads = 4
         opts.log_severity_level = 4
 
         self.session = onnxruntime.InferenceSession(
